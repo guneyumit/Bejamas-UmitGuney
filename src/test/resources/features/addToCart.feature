@@ -29,11 +29,17 @@ Feature: Add to Cart
     Then Cart should contain newly added items
 
   @cart-03 @smoke
-  Scenario: User should be able to see the cart by clicking basket icon
+  Scenario: User should be able to see, clear and close the cart
     Given User is on the home page
     When User adds the following items to the cart
       | Watercolor painting |
     Then Cart pop-up should appear from the basket icon in the header
+    When User clicks close button to be able to close cart pop-up
+    And User clicks basket icon to see the cart
+    And Cart should contain newly added items
+    And User clicks clear button to remove the items
+    Then Cart should be empty
+
 
 
 

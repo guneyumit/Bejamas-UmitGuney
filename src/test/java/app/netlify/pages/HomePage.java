@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.w3c.dom.html.HTMLInputElement;
 
 import java.util.List;
 
@@ -31,6 +32,17 @@ public class HomePage {
 
     @FindBy(css = ".style__Column-sc-4ctdae-1.jlvejm")
     public List<WebElement> itemsInTheProductList;
+
+    @FindBy(css = ".dZcQeL")
+    public WebElement closeButtonInCart;
+
+    @FindBy(css = ".jBrNBB")
+    public WebElement basketIcon;
+
+    @FindBy(css = ".kkjxIW")
+    public WebElement clearButtonInCart;
+
+
 
     public void navigateToUrl() {
         String url = ConfigurationReader.get("url");

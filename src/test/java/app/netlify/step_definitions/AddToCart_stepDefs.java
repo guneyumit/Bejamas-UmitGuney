@@ -2,6 +2,7 @@ package app.netlify.step_definitions;
 
 import app.netlify.pages.HomePage;
 import app.netlify.utilities.BrowserUtils;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -69,6 +70,28 @@ public class AddToCart_stepDefs {
 
         List<String> actualItems = BrowserUtils.getElementsText(homePage.listOfItemsInTheCart);
         Assert.assertEquals(expectedItems, actualItems);
+    }
 
+    @When("User clicks close button to be able to close cart pop-up")
+    public void userClicksCloseButtonToBeAbleToCloseCartPopUp() {
+        homePage.closeButtonInCart.click();
+    }
+
+    @And("User clicks basket icon to see the cart")
+    public void userClicksBasketIconToSeeTheCart() {
+
+        homePage.basketIcon.click();
+    }
+
+    @And("User clicks clear button to remove the items")
+    public void userClicksClearButtonToRemoveTheItems() {
+
+        homePage.clearButtonInCart.click();
+    }
+
+    @Then("Cart should be empty")
+    public void cartShouldBeEmpty() {
+
+        Assert.assertTrue(homePage.listOfItemsInTheCart.isEmpty());
     }
 }
