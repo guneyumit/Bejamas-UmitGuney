@@ -28,8 +28,15 @@ Feature: Add to Cart
     Then Cart pop-up should appear from the basket icon in the header
     Then Cart should contain newly added items
 
+  @cart-03 @smoke
+  Scenario: User should be able to see the cart by clicking basket icon
+    Given User is on the home page
+    When User adds the following items to the cart
+      | Watercolor painting |
+    Then Cart pop-up should appear from the basket icon in the header
 
-  #Scenario: User should be able to see the cart by clicking basket icon
+
+
 
 
 
