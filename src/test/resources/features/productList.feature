@@ -1,7 +1,7 @@
 @regression
 Feature: Product List
 
-  @list-01
+  @list-01 @smoke
   Scenario: User should be able to see 6 products
     Given User is on the home page
     When User scroll down and see the product list
