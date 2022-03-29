@@ -43,12 +43,3 @@ Feature: Add to Cart
 
 
 
-
-
-
-
-
-
-  #Scenario: User should be able to clear the cart by clicking close button
-
-
